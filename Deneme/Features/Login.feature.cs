@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Deneme.Features
+namespace SwagLabs.Features
 {
     using TechTalk.SpecFlow;
     using System;

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace SwagLabs.Utility
 {
+
     public class Asserts
     {
         public static void assertEquals(Object expected, Object actual)

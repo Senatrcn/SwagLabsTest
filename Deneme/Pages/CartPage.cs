@@ -27,7 +27,7 @@ namespace SwagLabs.Pages
             Asserts.assertTrue(_title.Displayed);
         }
 
-        public void clicksOnCheckOutBTN()
+        public void clicksOnCheckOutButton()
         {
             _checkoutButton.Click();
         }

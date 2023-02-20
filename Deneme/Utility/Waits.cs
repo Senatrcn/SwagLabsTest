@@ -27,32 +27,36 @@ namespace SwagLabs.Utility
         }
 
         // Wait For Visibility
-        public static void waitForVisibility(By locator, int timeout)
+        public static IWebElement waitForVisibility(By locator, int timeout)
         {
             try
             {
                 _wait = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(timeout));
-                _wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(locator));
+                IWebElement element = _wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(locator));
+                return element;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                return null;
             }
-
+            
 
         }
 
         // Wait For Clickablility
-        public static void waitForClickablility(IWebElement element, int timeout)
+        public static IWebElement waitForClickablility(IWebElement element, int timeout)
         {
             try
             {
                 _wait = new WebDriverWait(Driver.getDriver(), TimeSpan.FromSeconds(timeout));
-                _wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));
+                IWebElement webElement = _wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));
+                return webElement;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                return null;
             }
 
 

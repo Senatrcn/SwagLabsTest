@@ -9,6 +9,7 @@ using TechTalk.SpecFlow;
 
 namespace SwagLabs.StepDefinitions
 {
+    [Binding]
     public class ProductSortSteps
     {
         ProductsPage productsPage = new ProductsPage();
